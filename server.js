@@ -17,7 +17,7 @@ app.get('/hobbies/:type', mainCtrl.getHobbiesType);
 app.get('/family/', mainCtrl.getFamily);
 app.get('/family/:gender', mainCtrl.getFamilyGender);
 app.get('/restaurants/', mainCtrl.getRestaurant);
-// app.get('/restaurants/:name', mainCtrl.getRestaurantName)
+app.get('/restaurants/:name', mainCtrl.getRestaurantName)
 app.put('/name/:name', mainCtrl.putName);
 app.put('/location/', mainCtrl.putLocation);
 app.post('/hobbies/', mainCtrl.postHobbies);

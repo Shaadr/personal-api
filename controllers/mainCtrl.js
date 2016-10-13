@@ -72,13 +72,21 @@ var secrets = require('../secrets.js')
        res.status(200).json(user.restaurants)
      }
    },
+   getRestaurantName : function (req, res) {
+     var RestaurantsFilter = user.restaurants.filter(function (value) {
+       if ( req.params.name === value.name) {
+         return value;
+       }
+     })
+     res.status(200).json(RestaurantsFilter);
+   },
   //  getRestaurantName: function (res, req) {
   //    var name = req.params.name;
   //    var nameArr = []
   //    res.status(200).json(name)
   //  }
   putName: function (req,res) {
-    user.name = req.params.name;
+    user.name = req.body.name;
     res.status(200).end();
   },
   putLocation: function (req, res) {

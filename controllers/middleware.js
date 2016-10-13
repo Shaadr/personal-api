@@ -1,5 +1,6 @@
 var skillz = require('../skillz.js')
 var secrets = require('../secrets.js')
+var user = require('../user.js')
 var exports = module.exports = {}
 
 exports.addHeaders = function(req, res, next) {
